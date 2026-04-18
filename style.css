@@ -1,0 +1,299 @@
+RAFI
+rafi2126
+Sharing their screen
+
+Kleeimpact [Kyoツ],  — 03-Jun-25 0:13
+taan dicchi
+RAFI — 07-Feb-26 12:53
+ene de
+Kleeimpact [Kyoツ],  — 07-Feb-26 12:53
+https://discord.gg/ASmr8HtJ
+https://discord.gg/ASmr8HtJ
+Kleeimpact [Kyoツ],  — 10-Feb-26 23:24
+https://discord.gg/ASmr8HtJ
+Kleeimpact [Kyoツ],  — 16-Feb-26 0:07
+https://discord.gg/zqheSbm8
+Kleeimpact [Kyoツ],  — 07-Mar-26 0:43
+https://discord.gg/8PmnXrsR
+Kleeimpact [Kyoツ],  — 07-Mar-26 13:56
+https://discord.gg/8PmnXrsR
+Kleeimpact [Kyoツ],  — 10-Mar-26 0:21
+https://discord.gg/vw2BvHrG
+Kleeimpact [Kyoツ],  — 14:33
+aja
+RAFI — 14:33
+koi
+Kleeimpact
+ started a call. — 14:34
+RAFI — 14:35
+basirridwan7123@gmail.com
+#@!Chapa_level_100#@!
+Kleeimpact [Kyoツ],  — 14:38
+Your name — as you'd like it displayed
+Your title / role — (e.g. "Student", "Graphic Designer", "Software Developer", "Researcher", etc.)
+A short bio about yourself — 2-4 sentences about who you are
+Your skills — list them out (e.g. Python, Photoshop, Public Speaking, etc.)
+Education — school/university name, degree, year
+Projects or achievements — name + short description of 2-4 things you're proud of
+Contact info — email, LinkedIn, GitHub, or whatever you'd like to share
+RAFI — 14:54
+Your name — Ridwan Basir aka BillionaireRafi
+Your title / role — Student, Researcher, gamer, video edition, photo editor, content creator etc.)
+A short bio about yourself —  i am a student. my hobby is video game (valorant) and photography ...
+Your skills — C++, java, c#, Python, lightroom, Public Speaking in english..  gaming skill.. editing skill color grading
+Education — currently completing Bsc in CSE from AIUB. 
+Projects or achievements — nothing just a DEAN's Award from aiub
+Contact info — basirridwan7123@gmail.com, 
+linkedIn-https://www.linkedin.com/in/ridwan-basir-rafi-a1a3a2264/
+facebook-https://www.facebook.com/RidwanBasirRafi05/
+git-https://github.com/RafiVai05
+Log in or sign up to view
+See posts, photos and more on Facebook.
+GitHub
+RafiVai05 - Overview
+I am a programmer, my role is to find potential solution for every bug. - RafiVai05
+Image
+Kleeimpact [Kyoツ],  — 15:03
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ridwan Basir | Portfolio</title>
+
+message.txt
+5 KB
+:root {
+    --val-red: #ff4655;
+    --val-dark: #111111;
+    --val-gray: #ece8e1;
+    --forza-pink: #d90479;
+    --forza-blue: #00d2ff;
+
+message.txt
+5 KB
+﻿
+:root {
+    --val-red: #ff4655;
+    --val-dark: #111111;
+    --val-gray: #ece8e1;
+    --forza-pink: #d90479;
+    --forza-blue: #00d2ff;
+    --bg-dark: #0f1923;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none; /* Hides default cursor for our custom one */
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--val-gray);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Custom Cursor */
+#custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--val-red);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, border-color 0.3s;
+    z-index: 9999;
+}
+
+/* Time Widget */
+.widget-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(17, 17, 17, 0.8);
+    border-left: 4px solid var(--forza-blue);
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.widget-box span {
+    display: block;
+    text-align: right;
+    letter-spacing: 2px;
+}
+
+#current-time {
+    font-size: 1.5rem;
+    color: var(--val-red);
+}
+
+#current-date {
+    font-size: 0.9rem;
+    color: var(--forza-blue);
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.box {
+    background: var(--val-dark);
+    padding: 30px;
+    border: 1px solid #333;
+    border-top: 4px solid var(--val-red);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interactive-box:hover, .box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(217, 4, 121, 0.2);
+    border-top-color: var(--forza-pink);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #1a252f 0%, var(--bg-dark) 100%);
+    border-bottom: 2px solid var(--val-red);
+}
+
+.glitch-text {
+    font-size: 5rem;
+    color: var(--val-gray);
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 0px var(--val-red), -3px -3px 0px var(--forza-blue);
+}
+
+.sub-title {
+    font-size: 2rem;
+    color: var(--val-red);
+    margin-bottom: 10px;
+}
+
+.roles {
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    margin: 0 10px;
+    color: var(--val-dark);
+    background-color: var(--val-gray);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    transition: all 0.3s;
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+}
+
+.btn:hover {
+    background-color: var(--val-red);
+    color: white;
+}
+
+/* Skills */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skills-grid span {
+    background: #222;
+    padding: 8px 15px;
+    border-left: 3px solid var(--forza-blue);
+    font-size: 0.9rem;
+}
+
+/* Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-box {
+    background: var(--val-dark);
+    padding: 20px;
+    border: 1px solid #333;
+    border-left: 4px solid var(--val-red);
+}
+
+/* Contact Form */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Oswald', sans-serif;
+    color: var(--forza-blue);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #444;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--val-red);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--val-red);
+    color: white;
+    border: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--forza-pink);
+}
+
+.hidden { display: none; }
+.success-msg {
+    color: #00ff00;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #00ff00;
+    background: rgba(0, 255, 0, 0.1);
+    margin-bottom: 20px;
+}
