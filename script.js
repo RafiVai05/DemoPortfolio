@@ -21,8 +21,8 @@ const cursor = document.getElementById('custom-cursor') as HTMLElement;
 
 document.addEventListener('mousemove', (e: MouseEvent) => {
     if (cursor) {
-        cursor.style.left = ${e.clientX}px;
-        cursor.style.top = ${e.clientY}px;
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
         
         // Dynamic color changes based on screen position (Forza/Valorant theme shift)
         const xRatio = e.clientX / window.innerWidth;
