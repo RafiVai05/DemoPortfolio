@@ -1,93 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ridwan Basir | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RafiVai | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
-    <div id="custom-cursor"></div>
 
-    <div id="time-widget" class="widget-box">
-        <span id="current-time">00:00:00</span>
-        <span id="current-date">DD/MM/YYYY</span>
+  <!-- ═══ CUSTOM CURSOR ═══ -->
+  <div id="cursorRing"></div>
+  <div id="cursorDot"></div>
+
+  <!-- ═══ DATETIME WIDGET ═══ -->
+  <div class="datetime-widget" id="datetimeWidget">
+    <div class="dt-icon"><i class="fas fa-satellite-dish"></i></div>
+    <div class="dt-info">
+      <div class="dt-time" id="dtTime">00:00:00</div>
+      <div class="dt-date" id="dtDate">MON, JAN 01 2025</div>
+    </div>
+  </div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>
+      <span class="logo-text">RAFIVAI</span>
+      <span class="logo-bracket">]</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"      class="nav-link" data-section="home">HOME</a></li>
+      <li><a href="#about"     class="nav-link" data-section="about">ABOUT</a></li>
+      <li><a href="#skills"    class="nav-link" data-section="skills">SKILLS</a></li>
+      <li><a href="#projects"  class="nav-link" data-section="projects">PROJECTS</a></li>
+      <li><a href="#education" class="nav-link" data-section="education">EDUCATION</a></li>
+      <li><a href="#contact"   class="nav-link" data-section="contact">CONTACT</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="home" class="section hero-section">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-grid-floor"></div>
+    <div class="speed-lines-wrap">
+      <div class="speed-line sl1"></div>
+      <div class="speed-line sl2"></div>
+      <div class="speed-line sl3"></div>
+      <div class="speed-line sl4"></div>
+      <div class="speed-line sl5"></div>
+      <div class="speed-line sl6"></div>
     </div>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="glitch-text">RIDWAN BASIR</h1>
-            <h2 class="sub-title">AKA RAFIVAI</h2>
-            <p class="roles">Student | Researcher | Gamer | Content Creator | Editor</p>
-            <div class="social-links">
-                <a href="https://github.com/RafiVai05" target="_blank" class="btn">GitHub</a>
-                <a href="https://www.linkedin.com/in/ridwan-basir-rafi-a1a3a2264/" target="_blank" class="btn">LinkedIn</a>
-                <a href="https://www.facebook.com/RidwanBasirRafi05/" target="_blank" class="btn">Facebook</a>
-            </div>
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-dot"></span>
+        PLAYER ONE HAS ENTERED THE ARENA
+      </div>
+      <h1 class="hero-name">
+        <span class="name-line" id="heroName1">RIDWAN</span>
+        <span class="name-line accent-line" id="heroName2">BASIR</span>
+      </h1>
+      <div class="hero-aka">aka <strong>RafiVai</strong></div>
+      <div class="hero-typewriter">
+        <span class="tw-prefix">◈&nbsp;</span>
+        <span id="typewriterText"></span>
+        <span class="tw-cursor">|</span>
+      </div>
+      <div class="hero-stats-row">
+        <div class="hstat">
+          <span class="hstat-val">BSc</span>
+          <span class="hstat-label">Degree</span>
         </div>
-    </header>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-val">AIUB</span>
+          <span class="hstat-label">University</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-val">4+</span>
+          <span class="hstat-label">Lang</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-val">DEAN</span>
+          <span class="hstat-label">Award</span>
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary">
+          CONTACT ME <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#projects" class="btn btn-ghost">
+          VIEW PROJECTS
+        </a>
+      </div>
+    </div>
 
-    <section class="about-section container">
-        <div class="box">
-            <h3>AGENT DOSSIER</h3>
-            <p>I am a student currently completing my BSc in CSE. I have a massive passion for video games (Valorant) and photography. Whether I'm hitting headshots, tuning cars, or color grading a cinematic shot, I aim for high performance.</p>
-            <p><strong>Awards:</strong> DEAN's Award</p>
-        </div>
-        <div class="box skills-box">
-            <h3>LOADOUT / SKILLS</h3>
-            <div class="skills-grid">
-                <span>C++</span> <span>Java</span> <span>C#</span> <span>Python</span>
-                <span>Lightroom</span> <span>Video Editing</span> <span>Color Grading</span>
-                <span>Public Speaking</span> <span>Gaming</span>
-            </div>
-        </div>
-    </section>
+    <div class="hero-scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-bar"></div>
+    </div>
+  </section>
 
-    <section class="projects-section container">
-        <h3>LATEST MISSIONS / PROJECTS</h3>
-        <div class="project-grid">
-            <div class="project-box interactive-box">
-                <h4>Bird Shop Management System</h4>
-                <p>Desktop application built using C#, .NET, and SQL Server for streamlined inventory and database management.</p>
-            </div>
-            <div class="project-box interactive-box">
-                <h4>Words and Emotions</h4>
-                <p>Psychological research experiment investigating cognitive processing speeds. Compiled in strict APA format.</p>
-            </div>
-            <div class="project-box interactive-box">
-                <h4>Crecap Branding</h4>
-                <p>Digital marketing, high-end product photography, and content creation for custom headwear and apparel.</p>
-            </div>
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <div class="sec-tag">// DRIVER PROFILE</div>
+        <h2 class="sec-title">ABOUT <span class="accent">ME</span></h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="about-grid reveal">
+        <div class="about-left">
+          <div class="avatar-wrap">
+            <div class="avatar-ring-outer"></div>
+            <div class="avatar-ring-inner"></div>
+            <div class="avatar-core">RB</div>
+            <div class="avatar-speed-badge">DEAN'S AWARD</div>
+          </div>
         </div>
-    </section>
-
-    <section class="contact-section container">
-        <div class="box contact-box">
-            <h3>COMMS LINK</h3>
-            <div id="notification-area" class="hidden">
-                <p class="success-msg">MISSION ACCOMPLISHED: Message Sent!</p>
-            </div>
-            <form id="contact-form">
-                <div class="input-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" required placeholder="Enter your alias...">
-                </div>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required placeholder="Enter your comms address...">
-                </div>
-                <div class="input-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="4" required placeholder="Type your message..."></textarea>
-                </div>
-                <button type="submit" class="submit-btn">SEND TRANSMISSION</button>
-            </form>
+        <div class="about-right">
+          <div class="about-name-block">
+            <h3>Ridwan Basir</h3>
+            <div class="about-subtitle">Student · Researcher · Creator · Gamer</div>
+          </div>
+          <div class="about-location">
+            <i class="fas fa-location-dot"></i>&nbsp; Dhaka, Bangladesh &nbsp;·&nbsp;
+            <i class="fas fa-university"></i>&nbsp; AIUB
+          </div>
+          <p class="about-bio">
+            Currently pursuing a <span class="accent">BSc in Computer Science & Engineering</span> at the American International University-Bangladesh. I'm passionate about technology, competitive gaming, and visual storytelling.
+          </p>
+          <p class="about-bio">
+            When I'm not deep in code, you'll find me fragging in <span class="accent">Valorant</span>, capturing light through a lens, or color-grading footage to cinematic perfection. I blend technical precision with a creative edge — because great software, like great content, is all about the details.
+          </p>
+          <div class="about-pill-row">
+            <span class="pill">🎮 Gamer</span>
+            <span class="pill">📸 Photographer</span>
+            <span class="pill">🎬 Video Editor</span>
+            <span class="pill">💻 Developer</span>
+            <span class="pill">🎤 Public Speaker</span>
+            <span class="pill">🔬 Researcher</span>
+          </div>
+          <div class="about-socials">
+            <a href="mailto:basirridwan7123@gmail.com" class="soc-btn" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ridwan-basir-rafi-a1a3a2264/" target="_blank" class="soc-btn" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/RidwanBasirRafi05/" target="_blank" class="soc-btn" title="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://github.com/RafiVai05" target="_blank" class="soc-btn" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
-</body>
-</html>
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="sec-header reveal">
+        <div class="sec-tag">// PERFORMANCE STATS</div>
+        <h2 class="sec-title">MY <span class="accent">SKILLS</span></h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="skills-grid reveal">
+
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <i class="fas fa-code"></i>
+            <span>PROGRAMMING</span>
+          </div>
+          <div class="skill-list">
+            <div class="skill-row" data-val="85">
+              <div class="skill-row-top"><span>C++</span><span class="skval">85%</span></div>
+              <div class="skill-track"><div class="skill-bar blue" style="--w:85%"></div></div>
+            </div>
+            <div class="skill-row" data-val="80">
+              <div class="skill-row-top"><span>Java</span><span class="skval">80%</span></div>
+              <div class="skill-track"><div class="skill-bar blue" style="--w:80%"></div></div>
+            </div>
+            <div class="skill-row" data-val="78">
+              <div class="skill-row-top"><span>Python</span><span class="skval">78%</span></div>
+              <div class="skill-track"><div class="skill-bar blue" style="--w:78%"></div></div>
+            </div>
+            <div class="skill-row" data-val="72">
+              <div class="skill-row-top"><span>C#</span><span class="skval">72%</span></div>
+              <div class="skill-track"><div class="skill-bar blue" style="--w:72%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-header orange">
+            <i class="fas fa-palette"></i>
+            <span>CREATIVE</span>
+          </div>
+          <div class="skill-list">
+            <div class="skill-row" data-val="90">
+              <div class="skill-row-top"><span>Adobe Lightroom</span><span class="skval">90%</span></div>
+              <div class="skill-track"><div class="skill-bar orange" style="--w:90%"></div></div>
+            </div>
+            <div class="skill-row" data-val="88">
+              <div class="skill-row-top"><span>Color Grading</span><span class="skval">88%</span></div>
+              <div class="skill-track"><div class="skill-bar orange" style="--w:88%"></div></div>
+            </div>
+            <div class="skill-row" data-val="85">
+              <div class="skill-row-top"><span>Video Editing</span><span class="skval">85%</span></div>
+              <div class="skill-track"><div class="skill-bar orange" style="--w:85%"></div></div>
+            </div>
+            <div class="skill-row" data-val="82">
+              <div class="skill-row-top"><span>Photography</span><span class="skval">82%</span></div>
+              <div class="skill-track"><div class="skill-bar orange" style="--w:82%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-header yellow">
+            <i class="fas fa-gamepad"></i>
+            <span>OTHER</span>
+          </div>
+          <div class="skill-list">
+            <div class="skill-row" data-val="95">
+              <div class="skill-row-top"><span>Gaming — Valorant</span><span class="skval">95%</span></div>
+              <div class="skill-track"><div class="skill-bar yellow" style="--w:95%"></div></div>
+            </div>
+            <div class="skill-row" data-val="80">
+              <div class="skill-row-top"><span>Public Speaking (EN)</span><span class="skval">80%</span></div>
+              <div class="skill-track"><div class="skill-bar yellow" style="--w:80%"></div></div>
+            </div>
+            <div class="skill-row" data-val="75">
+              <div class="skill-row-top"><span>Research</span><span class="skval">75%</span></div>
+              <div class="skill-track"><div class="skill-bar yellow" style="--w:75%"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <div class="sec-tag">// RACE HISTORY</div>
+        <h2 class="sec-title">MY <span class="accent">PROJECTS</span></h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="proj-number">01</div>
+          <div class="proj-glow-line"></div>
+          <div class="proj-icon"><i class="fas fa-microchip"></i></div>
+          <h3 class="proj-title">C++ Data Structures</h3>
+          <p class="proj-desc">Implemented core data structures and algorithms in C++ — linked lists, binary trees, graphs, hash tables — with focus on time/space complexity optimization.</p>
+          <div class="proj-tags">
+            <span>C++</span><span>Algorithms</span><span>DSA</span>
+          </div>
+          <a href="https://github.com/RafiVai05" target="_blank" class="proj-link">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+
+        <div class="project-card reveal" style="--delay:0.1s">
+          <div class="proj-number">02</div>
+          <div class="proj-glow-line orange"></div>
+          <div class="proj-icon orange"><i class="fas fa-camera-retro"></i></div>
+          <h3 class="proj-title">Photography Portfolio</h3>
+          <p class="proj-desc">A curated set of photography works with custom Lightroom presets and advanced color grading workflows. Covers landscape, portrait, and street genres.</p>
+          <div class="proj-tags orange">
+            <span>Lightroom</span><span>Color Grading</span><span>Photography</span>
+          </div>
+          <a href="https://github.com/RafiVai05" target="_blank" class="proj-link">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+
+        <div class="project-card reveal" style="--delay:0.2s">
+          <div class="proj-number">03</div>
+          <div class="proj-glow-line yellow"></div>
+          <div class="proj-icon yellow"><i class="fas fa-robot"></i></div>
+          <h3 class="proj-title">Python Automation Tool</h3>
+          <p class="proj-desc">A Python automation script for file management and data processing with a Tkinter GUI. Reduces repetitive tasks and handles batch operations efficiently.</p>
+          <div class="proj-tags yellow">
+            <span>Python</span><span>Tkinter</span><span>Automation</span>
+          </div>
+          <a href="https://github.com/RafiVai05" target="_blank" class="proj-link">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+
+        <div class="project-card reveal" style="--delay:0.3s">
+          <div class="proj-number">04</div>
+          <div class="proj-glow-line"></div>
+          <div class="proj-icon"><i class="fas fa-gamepad"></i></div>
+          <h3 class="proj-title">Java Mini Game</h3>
+          <p class="proj-desc">A 2D arcade-style game built with Java Swing. Features collision detection, score tracking, multiple levels, enemy AI, and smooth frame-rate animations.</p>
+          <div class="proj-tags">
+            <span>Java</span><span>Swing</span><span>Game Dev</span>
+          </div>
+          <a href="https://github.com/RafiVai05" target="_blank" class="proj-link">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <div class="sec-header reveal">
+        <div class="sec-tag">// DRIVER LICENSE</div>
+        <h2 class="sec-title">EDUCATION & <span class="accent">AWARDS</span></h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="edu-grid reveal">
+
+        <div class="edu-card">
+          <div class="edu-badge current">CURRENT</div>
+          <div class="edu-icon-wrap">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="edu-body">
+            <h3>BSc in Computer Science &amp; Engineering</h3>
+            <div class="edu-inst">
+              <i class="fas fa-university"></i>
+              American International University-Bangladesh (AIUB)
+            </div>
+            <p class="edu-desc">Currently completing undergraduate studies focused on software engineering, algorithms, data structures, and systems design.</p>
+          </div>
+          <div class="edu-corner-deco"></div>
+        </div>
+
+        <div class="edu-card award">
+          <div class="edu-badge gold">ACHIEVEMENT</div>
+          <div class="edu-icon-wrap gold">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="edu-body">
+            <h3>Dean's Award</h3>
+            <div class="edu-inst">
+              <i class="fas fa-university"></i>
+              American International University-Bangladesh (AIUB)
+            </div>
+            <p class="edu-desc">Awarded the prestigious Dean's Award in recognition of outstanding academic performance and excellence at AIUB.</p>
+          </div>
+          <div class="edu-corner-deco gold"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <div class="sec-tag">// RADIO FREQUENCY</div>
+        <h2 class="sec-title">CONTACT <span class="accent">ME</span></h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="contact-grid reveal">
+
+        <div class="contact-info-col">
+          <h3>Let's <span class="accent">Connect</span></h3>
+          <p>Got a project, collab idea, or just want to say hi? Drop a message — I'll respond at full throttle.</p>
+          <div class="contact-links-list">
+            <a href="mailto:basirridwan7123@gmail.com" class="clink">
+              <span class="clink-icon"><i class="fas fa-envelope"></i></span>
+              <span>basirridwan7123@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ridwan-basir-rafi-a1a3a2264/" target="_blank" class="clink">
+              <span class="clink-icon"><i class="fab fa-linkedin"></i></span>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.facebook.com/RidwanBasirRafi05/" target="_blank" class="clink">
+              <span class="clink-icon"><i class="fab fa-facebook"></i></span>
+              <span>Facebook</span>
+            </a>
+            <a href="https://github.com/RafiVai05" target="_blank" class="clink">
+              <span class="clink-icon"><i class="fab fa-github"></i></span>
+              <span>GitHub / RafiVai05</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-col">
+          <form id="contactForm" novalidate>
+            <div class="fgroup">
+              <label for="fromName">NAME</label>
+              <input type="text" id="fromName" name="from_name" placeholder="Your name" required autocomplete="off"/>
+              <div class="fline"></div>
+            </div>
+            <div class="fgroup">
+              <label for="fromEmail">EMAIL</label>
+              <input type="email" id="fromEmail" name="from_email" placeholder="your@email.com" required autocomplete="off"/>
+              <div class="fline"></div>
+            </div>
+            <div class="fgroup">
+              <label for="fromMsg">MESSAGE</label>
+              <textarea id="fromMsg" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+              <div class="fline"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="sendBtn">
+              <span class="btn-idle">SEND MESSAGE &nbsp;<i class="fas fa-paper-plane"></i></span>
+              <span class="btn-loading" style="display:none">SENDING… &nbsp;<i class="fas fa-spinner fa-spin"></i></span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">RAFIVAI</span>
+        <span class="logo-bracket">]</span>
+      </div>
+      <p class="footer-copy">&copy; 2025 Ridwan Basir · All rights reserved</p>
+      <p class="footer-built">Built with code, coffee &amp; Forza spirit 🏎️</p>
+    </div>
+  </footer>
+
+  <!-- ═══ TOAST NOTIFICATION ═══ -->
+  <div class="toast" id="toast">
+    <div class="toast-icon success"><i class="fas fa-check-circle"></i></div>
+    <div class="toast-body">
+      <div class="toast-title">Message Sent!</div>
+      <div class="toast-sub">Thanks! I'll get back to you soon.</div>
+    </div>
+  </div>
+  <div class="toast toast-error" id="toastError">
+    <div class="toast-icon error"><i class="fas fa-times-circle"></i></div>
+    <div class="toast-body">
+      <div class="toast-title">Send Failed</div>
+      <div class="toast-sub">Please try again or email directly.</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
